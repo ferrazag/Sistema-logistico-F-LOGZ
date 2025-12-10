@@ -25,26 +25,26 @@ O script implementa:
 ```mermaid
 erDiagram
     usuarios {
-        INT id_usuario PK
+        INT id_usuario
         VARCHAR nome
-        VARCHAR email UNIQUE
+        VARCHAR email
         VARCHAR senha
-        ENUM tipo_usuario
+        VARCHAR tipo_usuario
     }
 
     motoristas {
-        INT id_motorista PK
-        INT id_usuario FK
+        INT id_motorista
+        INT id_usuario
         VARCHAR cnh
         VARCHAR matricula
     }
 
     produtos {
-        INT id_produto PK
-        INT id_motorista FK
+        INT id_produto
+        INT id_motorista
         VARCHAR nome
         VARCHAR descricao
     }
 
-    usuarios ||--|{ motoristas : "possui"
-    motoristas ||--|{ produtos : "é responsável por"
+    usuarios ||--|{ motoristas : possui
+    motoristas ||--|{ produtos : responde
