@@ -20,3 +20,31 @@ O script implementa:
 ‣ Regras de Relacionamento:   
     ▻ Uso de chaves estrangeiras para manter integridade entre usuários → motoristas → produtos.  
     ▻ Delete e update protegidos para evitar inconsistências.  
+
+    
+```mermaid
+erDiagram
+    usuarios {
+        INT id_usuario PK
+        VARCHAR nome
+        VARCHAR email UNIQUE
+        VARCHAR senha
+        ENUM tipo_usuario
+    }
+
+    motoristas {
+        INT id_motorista PK
+        INT id_usuario FK
+        VARCHAR cnh
+        VARCHAR matricula
+    }
+
+    produtos {
+        INT id_produto PK
+        INT id_motorista FK
+        VARCHAR nome
+        VARCHAR descricao
+    }
+
+    usuarios ||--|{ motoristas : "possui"
+    motoristas ||--|{ produtos : "é responsável por"
