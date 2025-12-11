@@ -1,12 +1,12 @@
 # Sistema-logistico-F-LOGZ
 
-**📦 Sistema Logístico — Estrutura do Banco de Dados.**
+## **📦 Sistema Logístico — Estrutura do Banco de Dados.**
 
 Este repositório contém o script SQL responsável pela criação e organização do banco de dados utilizado no Sistema Logístico F-LOGZ. O objetivo é estabelecer uma base sólida para o gerenciamento de usuários, motoristas e produtos, garantindo segurança, rastreabilidade e eficiência nas operações internas. 
 
 ---
 
-## **Estrutura de Usuários;**
+### **Estrutura de Usuários;**
 A tabela usuarios armazena informações essenciais para autenticação e identificação dentro do sistema.
 Destaques:
 - Controle de acesso através do campo tipo_usuario (admin ou motorista);
