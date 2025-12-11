@@ -7,7 +7,7 @@ Este repositório contém o script SQL responsável pela criação e organizaç�
 ---
 
 ### **📦 Estrutura de Usuários;**
-A tabela usuarios armazena informações essenciais para autenticação e identificação dentro do sistema.  Destaques:
+A tabela usuarios armazena informações essenciais para autenticação e identificação dentro do sistema. <br> Destaques:
 - Controle de acesso através do campo *tipo_usuario* (admin ou motorista);
 - Validação de dados fundamentais como e-mail e senha;
 - Integridade garantida por restrições e chaves primárias.
