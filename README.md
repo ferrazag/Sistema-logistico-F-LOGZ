@@ -6,7 +6,7 @@ Este repositório contém o script SQL responsável pela criação e organizaç�
 
 ---
 
-### **Estrutura de Usuários;**
+### **📦 Estrutura de Usuários;**
 A tabela usuarios armazena informações essenciais para autenticação e identificação dentro do sistema.
 Destaques:
 - Controle de acesso através do campo tipo_usuario (admin ou motorista);
@@ -15,7 +15,7 @@ Destaques:
 
 ---
 
-## **Tabela de Motoristas;**
+### **📦 Tabela de Motoristas;**
 A tabela motoristas está diretamente vinculada a usuarios por meio do campo id_usuario.
 Ela armazena informações específicas do motorista, como:
 - CNH
@@ -25,11 +25,13 @@ Esse vínculo garante que cada motorista seja também um usuário autenticado no
 
 ---
 
-## **Tabela de Produtos;**
+### **📦 Tabela de Produtos;**
 A tabela produtos associa cada produto a um motorista responsável.
 Com isso, o sistema permite:
 - Que cada motorista visualize apenas os produtos sob sua responsabilidade;
 - Um controle claro e organizado sobre entregas, cargas e movimentações.
+
+---
     
 ```mermaid
 erDiagram
