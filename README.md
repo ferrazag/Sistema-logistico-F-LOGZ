@@ -1,26 +1,35 @@
 # Sistema-logistico-F-LOGZ
 
-Este repositório contém o script SQL responsável pela criação do banco de dados utilizado em um Sistema Logístico. O objetivo principal é fornecer a estrutura necessária para gerenciar usuários, motoristas e produtos associados, garantindo controle de acesso e organização das operações internas.
+**📦 Sistema Logístico — Estrutura do Banco de Dados.**
 
-O script implementa:
+Este repositório contém o script SQL responsável pela criação e organização do banco de dados utilizado no Sistema Logístico F-LOGZ. O objetivo é estabelecer uma base sólida para o gerenciamento de usuários, motoristas e produtos, garantindo segurança, rastreabilidade e eficiência nas operações internas. 
 
-‣ Estrutura de Usuários:    
-    ▻ Tabela usuarios contendo informações de autenticação e identificação.    
-    ▻ Campo tipo_usuario que define se o usuário é admin ou motorista.  
-    ▻ Restrições que garantem consistência e integridade dos dados.  
+---
 
-‣ Tabela de Motoristas:  
-    ▻ Ligação direta com a tabela de usuários (id_usuario).      
-    ▻ Armazena dados específicos do motorista.  
+## **Estrutura de Usuários;**
+A tabela usuarios armazena informações essenciais para autenticação e identificação dentro do sistema.
+Destaques:
+- Controle de acesso através do campo tipo_usuario (admin ou motorista);
+- Validação de dados fundamentais como e-mail e senha;
+- Integridade garantida por restrições e chaves primárias.
 
-‣ Tabela de Produtos:  
-    ▻ Cada produto é vinculado a um motorista.  
-    ▻ Permite que cada motorista visualize somente os seus próprios produtos.  
+---
 
-‣ Regras de Relacionamento:   
-    ▻ Uso de chaves estrangeiras para manter integridade entre usuários → motoristas → produtos.  
-    ▻ Delete e update protegidos para evitar inconsistências.  
+## **Tabela de Motoristas;**
+A tabela motoristas está diretamente vinculada a usuarios por meio do campo id_usuario.
+Ela armazena informações específicas do motorista, como:
+- CNH
+- Matrícula
 
+Esse vínculo garante que cada motorista seja também um usuário autenticado no sistema.
+
+---
+
+## **Tabela de Produtos;**
+A tabela produtos associa cada produto a um motorista responsável.
+Com isso, o sistema permite:
+- Que cada motorista visualize apenas os produtos sob sua responsabilidade;
+- Um controle claro e organizado sobre entregas, cargas e movimentações.
     
 ```mermaid
 erDiagram
